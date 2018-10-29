@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Height 48dp -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabMode="scrollable"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </android.support.v4.view.ViewPager>
+
+    <!--
+        BottomNavigationView의 디자인 가이드
+        1. Navi 각 항목(버튼)의 개수는 최소 3개 이상으로 한다.
+        2. 권장개수 4-5정도까지
+            5개 이상일 경우 가급적 Title을 생략하라
+            아이콘이 의미있는 형태
+        3. title 문자열은 절대 2줄로 이루어지지 않도록 하라
+        4. 아이콘(이미지)를 배치할대, 가급적 1개의 색상으로 통일하라
+        5. API 28 이상에서는 RecyclerView와 연동해서 자동으로 감추는 기능이 포함
+    -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/view_pager"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+
+        app:itemIconTint="@color/bottom_navi_select"
+        app:itemTextColor="@color/bottom_navi_select"
+        app:layout_anchorGravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</android.support.design.widget.CoordinatorLayout>

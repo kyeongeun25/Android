@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bsc_names" >
+
+        <item>KBS</item>
+        <item>MBC</item>
+        <item>SBS</item>
+        <item>tvN</item>
+        <item>Jtbc</item>
+    </string-array>
+
+    <string-array name="genre_names" >
+
+        <item>음악</item>
+        <item>버라이어티</item>
+        <item>개그</item>
+        <item>시사/교양</item>
+        <item>토크쇼</item>
+    </string-array>
+
+</resources>

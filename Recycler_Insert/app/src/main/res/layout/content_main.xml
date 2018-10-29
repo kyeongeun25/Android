@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+            weight : 배치를 할 때 어떤비율로 배치 할 것인가를 결정
+            weight를 사용하려면 width를 0dp로 설정해야 한다.
+        -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txt_input"
+                android:textSize="15sp"
+                android:hint="문자열을 입력하세요."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:text="추가"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <!--
+        constraintLayout에 RecyclerView와 다른 View를
+        배치하고자 할 때
+
+        1. 다른 View를 상단에 배치할때
+            const..Top_toBottomOf= "다른뷰"
+            const..Bottom_toBottomOf="parent"
+
+        2. 다른 View를 하단에 배치할때
+            const..Top_toTopOf="parent"
+            const..Bottom_toTopOf="다른뷰"
+
+        그리고 Layout_Height="0dp"
+    -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/text_list"
+        android:background="#77d3fd"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</android.support.constraint.ConstraintLayout>

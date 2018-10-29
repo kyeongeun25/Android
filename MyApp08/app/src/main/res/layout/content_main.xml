@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--화면에 어떤 Text를 표시하고자 할 때-->
+    <TextView
+        android:id="@+id/txtView"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <!--EditText라는 widget이 있는데, 최신버전에서는 TextInput**
+        사용자로부터 어떤 문자, 숫자 등을 입력받고자 할 때-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!--사용자의 클릭, 터치 행위에 대해 반응하는 widget-->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Text View에 보이기"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--android:textAllCaps="false"
+            버튼에 보이는 영문자를 입력한 모양대로
+            기본값은 true로 되어 있어서 모두 대문자로 표시-->
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Toast"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="SnackBar"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Intent"/>
+
+
+    </LinearLayout>
+</LinearLayout>

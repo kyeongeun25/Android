@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="1dp"
+    android:background="#ffffff"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/item_date"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:lines="1"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/item_memo"
+        android:layout_width="0dp"
+        android:layout_weight="4.5"
+        android:lines="1"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:id="@+id/num1"
+      android:layout_width="match_parent"
+      android:layout_height="50dp">
+
+      <TextView
+          android:text="숫자 1 : "
+          android:textSize="20sp"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:layout_height="match_parent" />
+
+      <EditText
+          android:id="@+id/input_num1"
+          android:hint="숫자1을 입력하세요."
+          android:layout_width="0dp"
+          android:inputType="numberDecimal"
+          android:layout_weight="7"
+          android:layout_height="match_parent" />
+
+  </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/num2"
+        app:layout_constraintTop_toBottomOf="@id/num1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="숫자 2 : "
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/input_num2"
+            android:hint="숫자2을 입력하세요."
+            android:inputType="numberDecimal"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_group"
+        app:layout_constraintTop_toBottomOf="@id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:text="덧셈"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_min"
+            android:text="뺄셈"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            android:text="곱셈"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:text="나눗셈"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/input_text"
+        app:layout_constraintTop_toBottomOf="@id/btn_group"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

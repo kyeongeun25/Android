@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <GridLayout
+        android:id="@+id/grid_layout"
+        android:columnCount="4"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true">
+
+        <!--
+            Gridlayout을 작성할때 rowCount나, columnCount를 모두 지정하지 않고 한가지만 지정한 후
+            나머지 부분을 자동으로 증가 시키면서 layout을 완성하는 방법
+        -->
+
+        <!--
+            column을 0으로 지정하면 자동으로 row가 1개 증가되면서 Layout이 구성된다.
+        -->
+
+        <Space
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill" />
+
+        <TextView
+            android:layout_columnSpan="4"
+            android:text="로그인"
+            android:textSize="32sp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_columnSpan="4"
+            android:text="Email 아이디로 로그인 설정"
+            android:textSize="16sp"
+            android:layout_gravity="left" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:text="Email 주소 : " />
+
+        <!-- 문자열을 화면에서 짤리지 않을만큼 표시하고자 할때
+             문자개수에 비례하여 박스(TextView, EditText)의 크기를 지정하고자 할때
+             ems 단위를 사용한다. -->
+        <EditText
+            android:id="@+id/txt_email"
+            android:inputType="textEmailAddress"
+            android:ems="10" />
+
+        <TextView
+            android:layout_column="0"
+            android:layout_gravity="right"
+            android:text="비밀번호 : "/>
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:inputType="textPassword"
+            android:ems="8"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_row="5"
+            android:layout_gravity="center_horizontal"
+            android:text="로그인"/>
+
+        <Space
+            android:layout_column="0"
+            android:layout_row="6"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill" />
+
+    </GridLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    ScrollView와 HorizontalScrollView는
+    디자인 단계에서 보여질 항복의 개수가 정해진 경우에
+    상하, 또는 좌우 방향으로 스크롤을 해서 볼 수 있게 하는 기능에 제한이 있는 스크롤을 구현한다.
+
+    개수가 몇개인지 알 수 없는 형태의 scroll은
+    ListView나 RecyclerView같은 도구를 사용해야 한다.
+    * 최근에 제작되는 App에서는 ListView는 사용하지 않는다.
+
+-->
+
+
+<!--
+    Scroll View
+    Layout 같으면서 Layout이 아닌 View
+
+    1. Layout처럼 다른 Layout이나 View를 포함하는데 이름이 Layout이 아니고 View이다.
+       이유 : 내부에 1개의 layout이나 View만 포함할 수 있다.
+
+    2. 화면상에 상하 방향으로 화면 크기보다 더 큰 모양의 View를 보이고 싶을 때 사용하는 View 도구(Layout이 아니다)
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
+
+            <!--
+                HorizontalScrollView
+                수평방향으로 스크롤을 할 수 있는 View
+                내부에는 1개의 Layout이나 View만 넣을 수 있다.
+            -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:background="#FF0000"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:background="#00FF00"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:background="#0000FF"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:background="#ffff00"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:background="#c300ff"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:background="#FF0000"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:background="#00FF00"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="Hello World!" />
+
+        <TextView
+            android:background="#0000FF"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center_horizontal"
+            android:text="Hello World!" />
+
+        <TextView
+            android:background="#ffea00"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center_vertical"
+            android:text="Hello World!" />
+
+        <TextView
+            android:background="#bf00ff"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Hello World!" />
+
+        <TextView
+            android:background="#00ffd9"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="Hello World!" />
+
+    </LinearLayout>
+
+
+
+</ScrollView>

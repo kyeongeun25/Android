@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#f0f0f0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--
+        constraint : 압박하다, 강제하다, 강압적인
+        view(widget)들간에 어떤 관계를 강하게 유지해서 화면구성을
+        더 유연하게 처리 할 수 있도록 만들어진 Layout
+    -->
+
+    <!--
+        layout_width와 layout_height를 0dp로 설정하면
+        constraint layout이 실제 box를 늘려서 크기를 변경한다.
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="#ffff00"
+        android:text="안녕하세요"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:background="#ff00ff"
+        android:text="우리나라만세"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!--
+        Left_toLeftOf = "parent"와 Right_toRightOf="parent"를 사용 할 때
+        Horizontal_bias 값을 설정하는데,
+        기본값은 0.5 : 중앙에 배치
+         0.5보다 큰값 : 오른쪽에 힘이 더 가게
+         0.5보다 작은값 : 왼쪽에 힘이 더 가게
+
+
+         0부터 1범위내에서 사용
+
+         -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000ff"
+        android:text="12345"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--
+        Top_toTopOf = "parent"와 Bottom_toBottomOf="parent"를 사용 할 때
+        Horizontal_bias 값을 설정하는데,
+        기본값은 0.5 : 중앙에 배치
+         0.5보다 큰값 : 아래쪽에 힘이 더 가게
+         0.5보다 작은값 : 위쪽에 힘이 더 가게
+
+         0부터 1범위내에서 사용-->
+
+    <!--
+        app:layout_constraintDimensionRatio="h,1:1"
+        가로 세로 비율 = 1:1 >> 정사각형
+    -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:text="99999"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <!--
+        Guideline 설정방법
+
+        orientation = "horizontal"일때
+        Guide_begin : Top으로 부터의 거리
+        Guide_End : Bottom으로 부터의 거리
+        Guide_percent : height에 대한 퍼센트 위치
+
+        orientation = "vertical"일때
+        Guide_begin : Left으로 부터의 거리
+        Guide_End : Right으로 부터의 거리
+        Guide_percent : width에 대한 퍼센트 위치
+
+    -->
+    <android.support.constraint.Guideline
+        android:id="@+id/gu2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3f8fff"
+        android:text="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/gu1"
+        app:layout_constraintTop_toTopOf="@id/gu2" />
+
+</android.support.constraint.ConstraintLayout>

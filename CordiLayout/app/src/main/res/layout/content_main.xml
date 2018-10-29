@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    xmlns : xml로 선언된 namespace
+        java에서 import
+
+-->
+
+<!--
+    ConstraintLayout
+    1. RelativeLayout의 확장된 개념으로 탄생했다.
+    2. RelativeLayout의 모든 기능을 다 수행하고, 더불어 다른 Layout을 첨가하여 만들어야 되었던 화면 구현을
+       ConstraintLayout만으로도 쉽게 구현이 가능하게 되었다.
+    3. 강제적인 Layout 위치 결정 조건을 설정하여 훨씬 유연한 Layout을 구현 할 수 있다.
+    4. 요소, 조건, 설정값들을 app 네임스페이스에 설정을 한다.
+-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--
+        txt1과의 관계 : txt의 하단에 위치하도록
+        parent(ConstraintLayout)와 관계 : 좌우에서 끌어당기는 구조
+    -->
+
+    <Button
+        android:id="@+id/btn1"
+        android:text="버튼1"
+        android:background="#00FF00"
+        app:layout_constraintTop_toBottomOf="@id/txt1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+        Horizontal_bias : 0.5를 중심으로
+                          0.5보다 작으면 왼쪽으로 0.5보다 크면 오른쪽으로 배치
+
+    -->
+    <Button
+        android:id="@+id/btn2"
+        android:text="노랑버튼"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        android:layout_margin="10dp"
+        android:background="#0000FF"
+        android:textColor="#FFFF00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+        Vertical_bias : 0.5를 기준으로
+                        0.5보다 작으면 위쪽 0.5보다 크면 아래쪽으로 위치
+
+    -->
+    <Button
+        android:id="@+id/btn3"
+        android:text="반갑습니다"
+        android:textColor="#0000FF"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">우쭈쭈</string>
+    <string name="title_preg">임산부</string>
+    <string name="title_baby">영유아</string>
+    <string name="title_children">아동</string>
+    <!-- kinder, Kinder Garden -->
+</resources>

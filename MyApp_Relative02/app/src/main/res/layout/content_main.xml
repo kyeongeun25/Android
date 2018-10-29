@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!-- Relative Layout에 최초로 배치되는 widget에 아무런 제약 조건이 없으면
+         자동으로
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+        두 속성이 설정된 것과 같다. -->
+    <Button
+        android:text="버튼L"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="버튼C"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="버튼R"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnBC"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:text="버튼BC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnBL"
+        android:text="버튼BL"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/btnBC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnBLL"
+        android:text="버튼BLL"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:text="대한민국만세"
+        android:textSize="30sp"
+        android:background="#cccccc"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/b1"
+        android:text="b1"
+        android:layout_below="@+id/txt1"
+        android:layout_alignLeft="@id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/b2"
+        android:text="b2"
+        android:layout_below="@id/txt1"
+        android:layout_toRightOf="@id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/b3"
+        android:text="b3"
+        android:layout_below="@id/txt1"
+        android:layout_toRightOf="@id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

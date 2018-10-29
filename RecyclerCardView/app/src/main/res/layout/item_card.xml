@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- CardView Layout View
+            - 마치 액자형태로 아이템을 배치하는 작은 레이아웃 -->
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view = "http://schemas.android.com/apk/res-auto"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="#f0f000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/c"
+                android:id="@+id/item_image"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/item_text"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:background="#0000ff"
+                android:textColor="#f0f0f0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

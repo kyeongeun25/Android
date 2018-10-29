@@ -1,0 +1,33 @@
+
+    RelativeLayout에 대하여
+     1. 아무런 조건 없이 내부에 widget을 배치하면 좌측 최상단을 기준으로
+        모든 widget이 겹쳐 보인다.
+
+     2. RelativeLayout에 배치되는 widget들은 최초에 좌측 최상단에 widget을 배치하고
+        그 widget을 기준으로 상대적 조건을 주어 나머지 widget들을 배치한다.
+
+     3. layout_to*로 시작되는 조건
+        기준 widget의 left, right, top의 위치에 배치하겠다는 것
+
+        layout_below는 기준 widget의 아래쪽에 배치하겠다는 것
+
+     4. layout_align*로 시작되는 조건
+        기준 widget과 어떤 형식으로 정렬을 할 것인가 하는 것
+
+        layout_alignBaseLine은 표현된 content(text)를 기준으로 아래부분을 정렬하는 것
+        layout_alignBottom은 content를 포함하는 박스의 아래부분을 정렬하는 것
+
+        * background 효과(색깔등)가 있을 때는 Bottom으로 정렬하고,
+          단순히 content(text)만 있을 때는 Baseline으로 정렬하는 것이 깔끔해 보인다.
+
+     5. layout_alignParent*로 시작되는 조건
+        widget이 배치되는 layout을 기준으로 정렬
+        2개의 조건이 동시에 사용이 된다
+        layout_alignParentRight="true"
+        layout_alignParentBottom="true"로 설정을 하면
+        layout의 오른쪽 아래부분에 widget이 배치
+
+     6. centerInParent
+        화면(Layout)의 한 가운데 배치하는 조건
+        + alignParentLeft : 화면(세로가운데) 왼쪽에 배치
+        + alignParentRight : 화면(세로가운데) 오른쪽에 배치

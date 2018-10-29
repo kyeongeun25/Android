@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:text="반갑습니다\n 2번째 Activity입니다."
+        android:textSize="20sp"
+        android:background="#00FF00"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+        눈에 보이지 않는 가상의 레이아웃 선(Line)을 생성
+
+        orientation : 수평선, 수직선에 대한 구분
+        vertical 일때 begin : Layout의 왼쪽으로 부터의 간격
+                      end  : Layout의 오른쪽으로 부터의 간격
+                      percent : width에 대한 퍼센트 위치
+                        만약 10% = 0.1로 값 설정
+                        0.0 부터 1.0까지 범위
+
+        horizontal 일때 begin : Layout의 Top으로부터의 간격
+                        end  : Layout의 Bottom으로부터의 간격
+                        percent : height에 대한 퍼센트 위치
+    -->
+    <android.support.constraint.Guideline
+        android:id="@+id/v_gu1"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_begin="100dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_gu1"
+        android:orientation="horizontal"
+
+        app:layout_constraintGuide_begin="100dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_gu2"
+        android:orientation="horizontal"
+
+        app:layout_constraintGuide_begin="200dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="대한민국만세"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/v_gu1"
+        app:layout_constraintTop_toTopOf="@id/h_gu1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="우리나라만세"
+        android:textSize="20sp"
+
+        app:layout_constraintLeft_toLeftOf="@id/v_gu1"
+        app:layout_constraintTop_toTopOf="@id/h_gu2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

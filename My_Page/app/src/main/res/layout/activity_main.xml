@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imb_myface"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/myface"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="51dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:text="신청방청님"
+        android:textSize="30sp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@id/imb_myface"
+        tools:layout_editor_absoluteY="101dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="신청내역"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="320dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="내정보 수정"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="201dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="내가쓴 글"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="259dp"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+D:\kwon\2018\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+78110354.index
+3669943069.index
+4141643593.index
+502496600.index

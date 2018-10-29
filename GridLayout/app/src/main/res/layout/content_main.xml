@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!--
+        GridLayout
+       가로 세로 방향으로 칸을 나누어
+       내부 View를 배치하는 Layout
+
+       수평방향과 수직방향이 있는데
+       내부의 View의 순서를 정할 때 사용한다.
+    -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수평그리드" />
+
+
+        <GridLayout
+            android:orientation="horizontal"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+            <Button android:text="6"/>
+            <Button android:text="7"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수직그리드" />
+
+        <GridLayout
+            android:orientation="vertical"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+            <Button android:text="6"/>
+            <Button android:text="7"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수평그리드" />
+
+        <GridLayout
+            android:orientation="vertical"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+            <Button android:text="6"/>
+            <Button android:text="7"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수평그리드" />
+
+        <GridLayout
+            android:orientation="vertical"
+            android:rowCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+            <Button android:text="6"/>
+            <Button android:text="7"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:orientation="horizontal"
+            android:columnCount="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button android:text="나는 누구인가"/>
+            <Button android:text="2"
+                android:layout_gravity="fill_horizontal"
+                />
+            <Button android:text="3"/>
+            <Button android:text="4"
+                android:layout_gravity="fill_vertical|fill_horizontal"/>
+
+            <Button android:text="대한민국만세\nKorea"/>
+            <Button android:text="6"
+                android:layout_gravity="fill_vertical"/>
+            <Button android:text="7"
+                android:layout_gravity="fill"/>
+            <Button android:text="8"
+                android:layout_width="match_parent"/>
+
+        </GridLayout>
+
+        <!--style 속성-->
+        <!--
+            style.xml에 정의된 스타일을 이용해서
+            디자인을 일관되게 작성하기 위한 속성
+        -->
+        <GridLayout
+            android:columnCount="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView android:text="이름 : "
+                style="@style/my_label"/>
+
+            <TextView android:text="홍길동"
+                style="@style/my_text"/>
+
+            <TextView android:text="주소 : "
+                style="@style/my_label"/>
+
+            <TextView android:text="서울시 종로구 창신동"
+                style="@style/my_text"/>
+
+            <TextView android:text="전화번호 : "
+                style="@style/my_label"/>
+
+            <TextView android:text="010-111-2222"
+                style="@style/my_text"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

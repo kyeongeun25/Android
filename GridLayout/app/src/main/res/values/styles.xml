@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--my_text라는 스타일을 정의-->
+
+    <!--스타일을 지정하는 이유
+        같은 종류의 layout이나 view를 한 화면에 배치할때는
+        가급적 디자인에 일관성을 부여하는 것이 좋다.
+
+        이때 각 layout이나 view에 동일한 이름의 style을 지정해 두면
+        디자인을 변경 할 때 개별적인 layout이나 view를 변경하지 않고
+        style.xml에 지정된 스타일을 변경하면
+        전제척으로 일관되게 디자인을 변경 할 수 있다.-->
+
+    <style name="my_text">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#00FF00</item>
+
+    </style>
+
+    <style name="my_label">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <!--스타일이 아직 미정일때
+
+        1. 일반적으로 사용하는 스타일 1개를 item으로 하는 스타일을 하나 생성해 둔다.
+        2. 각 view에 이 스타일을 적용시켜 둔다
+        3. 나중에 디자인 스타일이 정해지면 item들을 하나씩 추가해서 디자인을 완성해 나간다.-->
+
+    <style name="my_st1">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

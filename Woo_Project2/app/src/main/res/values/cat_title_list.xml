@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 임산부 -->
+
+    <string-array name="title_preg">
+        <item>산모건강</item>
+        <item>아이건강</item>
+        <item>재직자</item>
+        <item>생활지원</item>
+    </string-array>
+
+    <!-- 영유아 -->
+    <string-array name="title_baby">
+        <item>보육지원</item>
+        <item>생활지원</item>
+        <item>건강지원</item>
+        <item>보호</item>
+        <item>입양위탁</item>
+    </string-array>
+
+
+    <!-- 아동 -->
+
+</resources>

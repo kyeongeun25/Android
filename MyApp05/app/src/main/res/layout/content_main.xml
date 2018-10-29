@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    widget들을 가로방향, 세로방향으로 나열하는 Layout
+    orientation 값에 따라 가로, 세로 방향이 지정
+        기본값 : 가로방향
+-->
+<!--
+    xmlns : xml name space라고 한다.
+            외부의 저장소로 부터 클래스를 다운로드 받아서 내 프로젝트에 포함시켜라.
+            그리고, 그것을 객체로 만들어서(new) 사용할 준비를 해라.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--
+        widget의 모양이나 성질을 바꿀 때는 android:객체에 속성들을 setting 해두면
+        각 widget은 android:객체의 속성값을 가져다가 모양이나 성질을 변경해서 디자인에 반영한다.
+
+        android:객체의 속성중에서 layout_width와 layout_height는 모든 widget에 반드시 설정해야하는 값이다.
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:background="@android:color/background_dark"
+        android:text="Hello World!" />
+
+    <!--
+        TextInputEditText는 layout_width와 layout_height를 모두 match_parent로 하고
+        사용할 크기(width, height)는 TextInputLayout에서 설정하여 둔다.
+    -->
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:hint="이름을 입력하세요."
+            android:inputType="textAutoComplete|textAutoCorrect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:hint="전화번호를 입력하세요."
+            android:inputType="textAutoComplete|textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- android:gravity="center_vertical" -->
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="이름:"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:hint="이름을 입력하세요."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="전화번호:"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:hint="전화번호를 입력하세요."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

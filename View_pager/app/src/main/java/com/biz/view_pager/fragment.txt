@@ -1,0 +1,23 @@
+Fragment의 특징
+
+1. Fragment는 반드시 Activity에서 생성, 호출, 보기가 가능
+2. Fragment는 1개의 Activity내에서 다른 View들과 같이 사용 가능
+3. 한개의 Activity내에서 다수의 Fragment를 사용할 수 있다.
+4. Activity 내에서 Fragment는 VO와 같은 한개의 클래스 단위로 취급된다.
+5. 상대적으로 Activity를 생성하는 것 보다는 Fragment를 사용하는 것이 자원절약면에서 유리하다.
+
+Fragment의 메서드 호출 순서(생명주기)
+1. onAttach() : 거의 사용하지 않아도 문제 없다.
+2. onCreate()
+3. onCreateView()
+4. onActivityCreate() : 실제 화면을 구성하기 위해서 내부적으로 Activity를 생성하는 원리로 준비하는 method
+5. onStart() : 마치 startActivity()를 실행하는 것과 같은 기능
+6. onResume() : 대기자
+7. Fragment 내의 다른 View를 작동
+8. onPause()
+9. onStop()
+10. onDestroyView() : 자원의 반납
+11. onDettach()
+
+위의 메서드들은 Fragment가 생성, 작동, 종료 되는 동안 순서대로 호출 되며 필요에 따라서 Override해서 사용 할 수 있다.
+
